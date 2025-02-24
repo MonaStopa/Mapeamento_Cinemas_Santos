@@ -29,7 +29,7 @@ body, html {
 
 .menu_logo {
     color: white;
-    font-size: 1.5em;
+    font-size: 2em;
     margin-left: 1em;
 }
 
@@ -92,7 +92,7 @@ body, html {
 /* Responsividade usando media queries */
 @media (max-width: 768px) {
     .menu_logo {
-        font-size: 1.2em;
+        font-size: 1.5em;
     }
 
     .menu_opcoes {
