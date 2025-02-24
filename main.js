@@ -35,6 +35,16 @@ var map = L.map('map').setView([-23.9608, -46.3336], 14); // Santos, Brasil
         { nome: 'Cine Alhambra', lat: -23.965268440696235, lon: -46.33131443784712, end:'R. José Caballero, 60 - Gonzaga, Santos - SP, 11055-300'}
         ];
 
+        // Selecione os elementos
+        var menuHamburguer = document.getElementById('menu-hamburguer');
+        var menuOpcoes = document.getElementById('menu-opcoes');
+
+        // Adicione um evento de clique para alternar a classe "show" no menu
+        menuHamburguer.addEventListener('click', function() {
+            menuOpcoes.classList.toggle('show');
+        });
+
+
         pontos.forEach(function(ponto) {
             L.marker([ponto.lat, ponto.lon]).addTo(map)
                 .bindPopup(`Mapeamento Cinemas de Santos </br> <b>${ponto.nome}</b><p>${ponto.end}</p>`);

@@ -43,6 +43,12 @@ body, html {
     margin-left: 1em;
 }
 
+.menu_hamburguer {
+    display: none; /* Esconde o ícone hambúrguer por padrão */
+    font-size: 2em;
+    cursor: pointer;
+}
+
 .menu_opcoes a {
     color: #502421;
     text-decoration: none;
@@ -90,7 +96,15 @@ body, html {
     }
 
     .menu_opcoes {
-        display: none; /* Esconde as opções no menu */
+        display: none; /* Esconde as opções de menu em telas pequenas */
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        background-color: #98615d; /* Cor do fundo do menu */
+        position: absolute;
+        top: 60px; /* Espaçamento do topo */
+        left: 0;
+        padding: 1em 0;
     }
 
     .menu {
@@ -99,6 +113,14 @@ body, html {
 
     .menu_opcoes li {
         margin: 1em 0;
+    }
+
+    .menu_hamburguer {
+        display: block; /* Mostra o ícone hambúrguer em telas pequenas */
+    }
+
+    .menu_opcoes.show {
+        display: flex; /* Mostra o menu quando a classe 'show' é adicionada */
     }
 
     .titulo {
