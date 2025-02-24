@@ -1,81 +1,134 @@
+/* Define o tamanho base das fontes e outros ajustes */
 :root {
     --large-default-padding: 6.5em;
     --medium-default-padding: 4em;
 }
 
-#map {
-    height: 50em;
-    width: 98%;
-    margin: 3em 1.5em 0em;
-}
-
-body, html{
+body, html {
     height: 100%;
-}
-
-body{
     margin: 0;
     font-family: "Roboto", serif;
     color: #555;
 }
 
 #principal {
-    width: 64em;
-    margin: auto ;
+    width: 90%;
+    max-width: 64em;
+    margin: auto;
 }
 
-header{
-    text-align: center;
-    padding: 1em;
-}
-
-.menu{
+/* Menu responsivo */
+.menu {
     background-color: #98615d;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3dvh;
+    align-items: center;
+    padding: 1em;
+    flex-wrap: wrap;  /* Permite que os itens se empilhem em telas pequenas */
 }
 
-.menu_logo{
-    margin: auto 0 auto 2em;
+.menu_logo {
     color: white;
+    font-size: 1.5em;
+    margin-left: 1em;
+}
+
+.menu_opcoes {
+    list-style: none;
+    display: flex;
+    margin-right: 1em;
 }
 
 .menu_opcoes li {
-    list-style: none;
-    display: inline-block;
-    margin: 0 1em 0 0;
-    padding: .2em 1em;
+    margin-left: 1em;
 }
 
 .menu_opcoes a {
     color: #502421;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: .8em;
-    letter-spacing: .15em;
-    transition: color .3s linear;
+    font-size: 0.8em;
+    letter-spacing: 0.15em;
+    transition: color 0.3s linear;
 }
 
 .menu_opcoes a:hover {
     color: white;
 }
 
-.titulo{
+/* Responsividade do mapa */
+#map {
+    height: 50vh;
+    width: 100%;
+    margin: 2em 0;
+}
+
+/* Ajustes nos textos */
+.titulo {
     text-align: center;
     text-transform: uppercase;
     margin: 1.2em;
 }
 
-.texto{
+.texto {
     text-align: justify;
     text-indent: 1em;
-
 }
 
-.rodape{
+/* Rodapé */
+.rodape {
     margin: 0;
     color: #753d39;
     text-align: center;
     padding: 2em 0;
+}
+
+/* Responsividade usando media queries */
+@media (max-width: 768px) {
+    .menu_logo {
+        font-size: 1.2em;
+    }
+
+    .menu_opcoes {
+        display: none; /* Esconde as opções no menu */
+    }
+
+    .menu {
+        flex-direction: column; /* Empilha os itens do menu em telas pequenas */
+    }
+
+    .menu_opcoes li {
+        margin: 1em 0;
+    }
+
+    .titulo {
+        font-size: 1.5em;
+    }
+
+    .texto {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu_logo {
+        font-size: 1.2em;
+        text-align: center;
+        margin: 1em 0;
+    }
+
+    .menu_opcoes {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .menu_opcoes li {
+        margin: 1em 0;
+    }
+
+    .rodape {
+        padding: 1em;
+    }
 }
