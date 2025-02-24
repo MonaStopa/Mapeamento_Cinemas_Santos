@@ -8,11 +8,33 @@
     <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-    <h2>Mapeamento Cinemas de Santos</h2>
-    <div id="map"></div>
     
-    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <header class="menu">
+            <h1 class="menu_logo">Cinemas de Santos</h1>
+            <ul class="menu_opcoes">
+                <li><a href="https://www.linkedin.com/in/monalisastopa/"target=”_blank”>Linkedin</a></li>
+                <li><a href="https://contate.me/monastopa"target=”_blank”>Whatsapp</a></li>
+                <li><a href="mailto:mstopa.arq@gmail.com"target=”_blank”>Gmail</a></li>
+            </ul>
+        </header>
+        
+        <div id="principal">
 
-    <script src="main.js"></script>
+        <main>
+            <h1 class="titulo">Mapeamento</h1>
+            <p class="texto">Santos já foi palco de uma rica cena cultural marcada pela presença vibrante dos cinemas de rua. Esses espaços, espalhados pelos bairros da cidade, não eram apenas locais de exibição de filmes, mas também pontos de encontro, convivência e diversão. Do imponente Cine Coliseu ao charmoso Cine Paratodos, cada sala tinha sua identidade e deixou lembranças na memória dos santistas.</p>
+            <p class="texto">Com o passar dos anos, muitos desses cinemas fecharam suas portas, acompanhando a mudança de hábitos de lazer e o avanço dos complexos de cinema em shoppings. Hoje, resistindo a esse cenário de transformações, apenas dois cinemas de rua seguem em funcionamento em Santos: o tradicional Cine Roxy, símbolo da cultura cinematográfica local desde 1934, e o Posto 4, que ainda promove sessões à beira-mar, mantendo viva a experiência única de assistir a filmes fora dos grandes centros comerciais.
+            <p class="texto">Este mapa é um resgate afetivo e histórico desses espaços, celebrando a importância dos cinemas de rua na vida cultural de Santos e a memória coletiva da cidade.</p>
+
+            <section>
+                <div id="map"></div>
+                <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+                <script src="main.js"></script>
+            </section>  
+
+            <p class="rodape">Autora Monalisa Stopa ©</p>
+        </main>
+    </div>
+  
 </body>
 </html>
