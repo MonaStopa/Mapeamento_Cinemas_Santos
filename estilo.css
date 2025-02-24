@@ -1,9 +1,81 @@
-#map {
-    height: 500px;
-    width: 100%;
+:root {
+    --large-default-padding: 6.5em;
+    --medium-default-padding: 4em;
 }
 
-h2{
+#map {
+    height: 50em;
+    width: 98%;
+    margin: 3em 1.5em 0em;
+}
+
+body, html{
+    height: 100%;
+}
+
+body{
+    margin: 0;
+    font-family: "Roboto", serif;
+    color: #555;
+}
+
+#principal {
+    width: 64em;
+    margin: auto ;
+}
+
+header{
     text-align: center;
-    padding: 10px;
+    padding: 1em;
+}
+
+.menu{
+    background-color: #98615d;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3dvh;
+}
+
+.menu_logo{
+    margin: auto 0 auto 2em;
+    color: white;
+}
+
+.menu_opcoes li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 1em 0 0;
+    padding: .2em 1em;
+}
+
+.menu_opcoes a {
+    color: #502421;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    letter-spacing: .15em;
+    transition: color .3s linear;
+}
+
+.menu_opcoes a:hover {
+    color: white;
+}
+
+.titulo{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 1.2em;
+}
+
+.texto{
+    text-align: justify;
+    text-indent: 1em;
+
+}
+
+.rodape{
+    margin: 0;
+    color: #753d39;
+    text-align: center;
+    padding: 2em 0;
 }
